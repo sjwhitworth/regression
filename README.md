@@ -1,19 +1,19 @@
-regression
+regression 
 =======
 
-Multivariable Linear Regression in Go (golang)
+Multivariable Linear Regression in Go (golang) - forked from sajari
 
 installation
 ------------
 
-    go get github.com/sajari/regression
+    go get github.com/sjwhitworth/regression
 
 usage
 -----
 
-Import the package, create a regression and add data to it. You can use as many variables as you like, in the below example there are 3 variables for each observation
+Import the package, create a regression and add data to it. You can use as many variables as you like, in the below example there are 3 variables for each observation. You can also save and load an initialised model, demonstrated below:
 
-    import "github.com/sajari/regression"
+    import "github.com/sjwhitworth/regression"
 
     func main() {
         var r regression.Regression
@@ -28,5 +28,8 @@ Import the package, create a regression and add data to it. You can use as many 
         r.AddDataPoint(regression.DataPoint{Observed : 50, Variables : []float64{188, 182, 0.0143}})
         r.RunLinearRegression()
         r.Dump(true)
+
+        r.Save("medical.gob")
+        model := regression.Load("medical.gob")
     }
 
