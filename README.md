@@ -1,4 +1,4 @@
-regression 
+go-regress 
 =======
 
 Multivariable Linear Regression in Go (golang) - forked from sajari
