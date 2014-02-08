@@ -3,12 +3,12 @@ go-regress
 
 Multivariable Linear Regression in Go (golang) - forked from sajari
 
-installation
+Installation
 ------------
 
     go get github.com/sjwhitworth/regression
 
-usage
+Usage
 -----
 
 Import the package, create a regression and add data to it. You can use as many variables as you like, in the below example there are 3 variables for each observation. You can also save and load an initialised model, demonstrated below:
@@ -33,3 +33,7 @@ Import the package, create a regression and add data to it. You can use as many 
         model := regression.Load("medical.gob")
     }
 
+Plans
+-----
+
+I plan to merge this into [golearn](https://github.com/sjwhitworth/golearn) - a machine learning library for Go. Contributions are welcome.
